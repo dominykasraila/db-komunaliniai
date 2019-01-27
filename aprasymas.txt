@@ -1,0 +1,96 @@
+Duomenų bazė, kurioje yra saugomi duomenys apie komunalinius.
+Joje įrašytos procedūros, kurios apskaičiuoja, kiek mokėti kiekvienam asmeniui už komunalinius.
+	- leidžia išskaičiuoti mokesti už vandens/elektros/dujų parodymus išvykimo atveju
+	- leidžia taikyti "nuolaidas", pvz. Kristinai už vandenį.
+	- apskaičiuoti kiekvienam asmeniui atskirai už kambarį.
+Lentelės:
+aušrinė
+	data
+	įsiskolinimas/permoka
+	šildymas
+	vandens pašild.
+	vandens pašild. tarifas
+	šilumos kiekis su nepaskirstytu KV kiekiu
+		tarifas
+	kompensacija
+	temp. palaikymas
+	atlyginimai
+		tarifas
+	liftų elektra
+		tarifas
+	liftų eksplotacija
+		tarifas
+	bendras apšvietimas
+		tarifas
+	šilumos ūkis
+		tarifas
+	eksploatacija
+		tarifas
+	kaupiamosios lėšos
+		tarifas
+	teritorijos priežiūra
+		teritorijos priežiūra
+	žemės mokestis
+		tarifas
+	kasos patarnavimai
+	suma
+	karštas vanduo
+		iki
+		nuo
+klaipėdos vandenys
+	vanduo
+		kiekis
+		suma
+	nuotekos
+		kiekis
+		suma
+	šaltas vanduo pašildymui
+		kiekis
+		suma
+	nuotekos po šalto vandens pašildymo
+		kiekis
+		suma
+	apskaitos veikla
+		suma
+	ats. karšto v. apsk. priet. aptarn. mokestis
+		suma
+	suma
+dujos
+	data
+	iki
+	nuo
+	tarifas
+	suma
+	pastovioji tarifo dalis
+elektra
+	data
+	iki
+	nuo
+	skirtumas
+	tarifas
+	suma
+šildymas
+	išmatuota dalis
+	nustatyta dalis
+	apskaitos mokesciai
+	suvartota dalis
+		virtuve
+		svetaine
+		kambarys1
+		kambarys2
+	suvartotos dalies suma
+
+-- Jei nėra svečias, vadinasi gyventojas išvyko ir iš komunalinių dalybų jam reikia atimti atitinkamai tarifą. Jei yra svečias, vadinasi gyventojui papildomai reikės sumokėti už svečią.
+išvykimas/svečias
+	gyventojas
+	data nuo
+	data iki
+	vanduo nuo
+	vanduo iki
+	dujos nuo
+	dujos iki
+	elektra nuo
+	elektra iki
+	ar_svečias
+Gyventojas
+	vardas
