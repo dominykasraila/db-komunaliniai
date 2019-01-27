@@ -79,6 +79,7 @@ CREATE TABLE kambarys (
 CREATE TABLE kambarys_apskaita (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     kambarys_id int NOT NULL,
+    apskaita_id int NOT NULL,
     sildymo_rodmenys decimal(9,6) NOT NULL
 );
 
@@ -124,7 +125,9 @@ CREATE TABLE atsiskaitymas_gyventojas (
 );
 
 -- Išoriniai raktai
-ALTER TABLE kambarys_apskaita FOREIGN KEY 
+ALTER TABLE kambarys_apskaita FOREIGN KEY kambarys_id REFERENCES kambarys(id);
+ALTER TABLE kambarys_gyventojas FOREIGN KEY kambarys_id REFERENCES gyventojas(id);
+ALTER TABLE kambarys_gyventojas FOREIGN KEY gyventojas_id REFERENCES gyventojas(id);
 
 -- Duomenų įvedimas
 INSERT INTO atsiskaitymas SET
