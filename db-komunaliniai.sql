@@ -76,7 +76,7 @@ CREATE TABLE kambarys (
 );
 
 -- Apskaitos laikotarpiui apskaičiuota šiluma kambariui
-CREATE TABLE kambarys_apskaita (
+CREATE TABLE kambario_sildymas (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     kambarys_id int NOT NULL,
     apskaita_id int NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE kambarys_apskaita (
 );
 
 -- Viename kambaryje gali gyventi keli gyventojai, kurie dalinasi mokesčiais už kambario šildymą
-CREATE TABLE kambarys_gyventojas (
+CREATE TABLE kambario_gyventojai (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     gyventojas_id int NOT NULL,
     kambarys_id int NOT NULL
@@ -125,9 +125,10 @@ CREATE TABLE atsiskaitymas_gyventojas (
 );
 
 -- Išoriniai raktai
-ALTER TABLE kambarys_apskaita FOREIGN KEY kambarys_id REFERENCES kambarys(id);
-ALTER TABLE kambarys_gyventojas FOREIGN KEY kambarys_id REFERENCES gyventojas(id);
-ALTER TABLE kambarys_gyventojas FOREIGN KEY gyventojas_id REFERENCES gyventojas(id);
+ALTER TABLE kambario_sildymas FOREIGN KEY kambarys_id REFERENCES kambarys(id);
+ALTER TABLE kambario_sildymas FOREIGN KEY kambarys_id REFERENCES kambarys(id);
+ALTER TABLE kambario_gyventojai FOREIGN KEY kambarys_id REFERENCES gyventojas(id);
+ALTER TABLE kambario_gyventojai FOREIGN KEY gyventojas_id REFERENCES gyventojas(id);
 
 -- Duomenų įvedimas
 INSERT INTO atsiskaitymas SET
