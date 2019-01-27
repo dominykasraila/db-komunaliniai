@@ -195,3 +195,9 @@ INSERT INTO atsiskaitymas SET
 
     -- Šeimininko kompensacija už komunalinius arba nemėnesiniai mokėsčiai (pvz., už šiukšles)
     kita = -5.00;
+
+INSERT INTO kambarys (id, pavadinimas) VALUES
+    ('71699590', 'Virtuvė'),
+    ('71699554', 'Svetainė'),
+    ('71699552', 'Mažasis miegamasis'),
+    ('71699550', 'Didysis miegamasis');
