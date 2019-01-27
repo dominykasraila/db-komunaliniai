@@ -1,6 +1,8 @@
 -- 10.1.37-MariaDB
 
-CREATE OR REPLACE DATABASE db_komunaliniai;
+CREATE OR REPLACE DATABASE db_komunaliniai
+    CHARACTER SET = 'utf8'
+    COLLATE = 'utf8_general_ci';
 
 USE db_komunaliniai;
 
